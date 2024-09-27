@@ -3,20 +3,18 @@
     --marrom: #8D6E63;
     --color1: #f4f4f4;
     --color2: #fff;
-    --color5: #007BFF;
-    --color6: #0056b3;
-    --color-light-50: #fefff5;
-   
+
     --color-dark-50: #797985;
     --color-dark-100: #28232d;
     --color-dark-900: #000000;
  
+    --color-light-50: #fefff5;
     --color-purple-50: #7c3aed;
-    --color-purple-100: #a855f7;
-    --color-purple-200: #bf46ef;
- 
     --color-gradiente: linear-gradient(90deg, var(--Musgo), var(--marrom));
 
+}
+.h3{
+    margin-right: 500px;
 }
 
 * {
@@ -37,7 +35,10 @@ header {
     text-align: center;
     padding: 20px; /* Melhorar o espaçamento */
 }
-
+.card h2, .card h3 {
+    display: grid;
+    place-items: center;
+}
 header h1 {
     font-variant: small-caps;
     font-size: 4vw;
@@ -58,12 +59,29 @@ section {
     font-size: 2vw;
 }
 
+div.video{
+    background-color:var(--Musgo);
+    margin: 0px -10px 30px -10px ;
+    padding: 20px;
+    padding-bottom: 45%;
+    position: relative;
+}
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+
+}
 section.normal {
     background-color: white;
     text-align: center;
 }
 
 section.imagem{
+
+    text-align: justify;
     background-color: rgb(51, 51, 51);
     color: white;
     background-image: url(img/ecologia.jpg);
@@ -89,16 +107,21 @@ body {
     background-color: #f4f4f4;
 }
 .card{
+    
     max-width: 33.3%;
-    background-color: var(--marrom);
     color: black;
     margin-right: 10px;
     min-height: auto;
     max-height: auto;
     text-align: justify;
     padding: 5px;
+    padding-top: 20px;
     border-radius: 10px;
 
+}
+
+.card-1, .card-2,.card-3{
+    background: var(--color-gradiente);
 }
 .card-container{
     display: flex;
@@ -153,9 +176,10 @@ body {
     color: #333;
 }
 #container{
+    display: grid;
+    place-items: center;
     height: 100vh;
     width: 100%;
-    display: flex;
     justify-content: center;
     align-items: center;
     background: var(--color-gradiente);
@@ -163,6 +187,7 @@ body {
  
 #login_form{
     display: flex;
+    width: 500px;
     flex-direction: column;
     height: fit-content;
     background-color: var(--color-light-50);
@@ -279,6 +304,42 @@ body {
 .dark#login_form #input_field i{
     color: var(--color-dark-50);
 }
+.dark textarea{
+    color: var(--color-dark-50);
+}
+
+#input_field textarea {
+    width: 260px;
+    background-color: transparent;
+    font-size: 18px;
+    padding: 0px 5px;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 100px; /* ajuste a altura conforme necessário */
+    margin-left: -10px ;
+}
+
+#input_field textarea:focus {
+    outline: none;
+}
+.inf{
+    width: 500px;
+    color: rgb(0, 0, 0);
+    background-color: var(--color1);
+    border-radius: 15px;
+    padding: 25px;
+    margin: 10px;
+    text-align: justify;
+    box-shadow: 3px 2px 20px 3px black;
+ 
+}
+.inf a{
+    color: black;
+    text-decoration: none;
+}
+.inf a:hover{
+    text-decoration: underline;
+}
  
 @keyframes dark-to-light-background{
     0%{
@@ -300,8 +361,11 @@ body {
 #quiz{
     background: var(--color-gradiente);
 }
-#quiz h3{
+
+#quiz-form  h3{
     font-size: 20px;
+    margin-top: -10px;
+    text-align: left;
     
 }
 #quiz label{
@@ -309,14 +373,13 @@ font-size: 15px;
 margin-bottom: 0px;
 }
 .quiz-section{
-    width: 500px;
+    width: 700px;
     background-color: #fefff5;
     color: black;
+    margin: auto;
+    
 }
-#quiz form{
-    display: grid;
-    place-items: center;
-}
+
 .quiz-button{
     width: 100%;
     height: 30px;
@@ -330,4 +393,20 @@ margin-bottom: 0px;
 .quiz-button:disabled:hover{
     transform: none;
     background-color: var(--Musgo);
+}
+
+
+h5{
+    margin-left: 20px;
+}
+audio {
+    width: 300px; /* Define a largura do controle de áudio */
+    border: 2px solid #558b2f; /* Borda ao redor do controle */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Adiciona sombra */
+    margin: 20px; /* Espaçamento ao redor */
+    padding: 5px; /* Espaçamento interno */
+}
+.trans{
+    display: none;
 }

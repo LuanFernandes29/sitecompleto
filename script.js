@@ -53,7 +53,7 @@ function submitQuiz(){
     let result = document.getElementById('result');
     result.innerHTML = `Você acertou ${score} de 10 perguntas.`
  
-    if(score === 7){
+    if(score === 10){
         let sucessSound = document.getElementById("venceusom");
         sucessSound.play();
     }else{
@@ -73,4 +73,3 @@ function recomecar(){
     document.getElementById('enviar').disabled=false;
     document.getElementById('recomeco').disabled=true;
 };
- 
