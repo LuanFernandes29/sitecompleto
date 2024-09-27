@@ -96,7 +96,9 @@
                 <label><input type="radio" name="q10" value="C" onclick="disableoptions('q10'),playsound()">C) Comprar o máximo possível, sem pensar no futuro</label> <br>
                 <label><input type="radio" name="q10" value="D" onclick="disableoptions('q10'),playsound()">D) Uso de embalagens não-recicláveis</label> <br>
             </section>
-            <button type="button" onclick="submitquiz()" id="envio">Enviar Quiz</button>
+            <button class="quiz-button" type="button" onclick="submitQuiz()" id="enviar">Enviar Quiz</button>
+            <button class="quiz-button" type="button" onclick="recomecar()" id="recomeco" disabled>resetar quiz</button>
+
         </form>
         
         <audio id="venceusom" src="som/venceu.mp3" preload="auto"></audio>

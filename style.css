@@ -317,13 +317,17 @@ margin-bottom: 0px;
     display: grid;
     place-items: center;
 }
-#envio{
+.quiz-button{
     width: 100%;
     height: 30px;
     border-radius: 10px;
     background-color: var(--Musgo);
 }
-#envio:hover{
+.quiz-button:hover{
     background-color: #5fa030;
     transform: scale(1.03);
+}
+.quiz-button:disabled:hover{
+    transform: none;
+    background-color: var(--Musgo);
 }
