@@ -15,7 +15,7 @@ const form = document.getElementById('login_form')
         form.classList.remove('dark') 
     }
 })
-function disableOptions(questionName){
+function disableoptions(questionName){
     let options = document.getElementsByName (questionName);
     options.forEach(option => {
         if(!option.checked){
