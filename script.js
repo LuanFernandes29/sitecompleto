@@ -51,7 +51,7 @@ function submitQuiz(){
         }
     }
     let result = document.getElementById('result');
-    result.innerHTML = `Você acertou ${score} de 7 perguntas.`
+    result.innerHTML = `Você acertou ${score} de 10 perguntas.`
  
     if(score === 7){
         let sucessSound = document.getElementById("venceusom");
